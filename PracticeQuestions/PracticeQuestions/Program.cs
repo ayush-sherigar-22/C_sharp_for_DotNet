@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Numerics;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading.Channels;
 
 
 namespace PracticeQuestions
@@ -17,7 +18,7 @@ namespace PracticeQuestions
             // Using For Loop
             Console.WriteLine("Using for Loop "+PowerLoop(34, 4));
 
-            // using Lamda
+            // using Lambda
             Func<double, double, double> power = (x, y) => Math.Pow(x, y);
             double n1 = 34; 
             double n2 = 4;
@@ -36,6 +37,11 @@ namespace PracticeQuestions
             return Math.Pow(n1, n2);
         }
 
+        
+
+        public int MyProperty1 { get; set; }
+
+        
         public static double PowerLoop(double n1, double n2)
         {
             var result = n1;
@@ -47,14 +53,22 @@ namespace PracticeQuestions
         }
 
 
-        public static double AreaOfRectangle(double len, double breadth)
+        private int myVar;
+
+        public int MyProperty
         {
-            return len * breadth;
+            get { return myVar; }
+            set { myVar = value; }
         }
+
+
+    
 
         public static double AreaOfCircle(double radius)
         {
             return Math.PI * radius*radius;
+
+            
         }
     }
     
