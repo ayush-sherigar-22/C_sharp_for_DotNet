@@ -26,7 +26,7 @@ namespace LoopStatements
             var result = 0;
             if (int.TryParse(limit, out int num))
             {
-                for (int i = 0; i <= num; i++)
+                for (int i = 0; i <= num; )
                 {
                     result += i;
                 }
