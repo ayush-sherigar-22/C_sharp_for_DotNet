@@ -7,9 +7,9 @@
             private float _price;
             private float _discount;
 
-        public string Name => _name;
-        public float Price => _price;
-        public float Discount => _discount;
+            public string Name => _name;
+            public float Price => _price;
+            public float Discount => _discount;
             public Product(string name, float price )
             {
                
