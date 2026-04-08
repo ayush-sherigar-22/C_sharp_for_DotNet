@@ -36,14 +36,14 @@
             return _password == inputPassword;
         }
 
-        public int PasswordLength => _password.Length;
+
 
         public void DisplayUser()
         {
             Console.WriteLine($"Username: {_username}");
         
         }
-}
+    }
 }
 
 

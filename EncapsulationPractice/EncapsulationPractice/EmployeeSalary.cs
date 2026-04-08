@@ -6,27 +6,27 @@
         private string _name;
         private float _salary;
 
-
-        public EmployeeSalary(int id, string name, float sal)
+        public EmployeeSalary()
         {
+                
+        }
+        public EmployeeSalary(int id, string? name, float sal)
+           {
             _id = id;
 
             if (string.IsNullOrWhiteSpace(name))
-            {
                 throw new ArgumentNullException("Invalid Name");
-            }
-            _name = name;
-            SetSalary(sal);
-        }
-       
-      private void SetSalary(float amnt)
-       {
-            if (amnt < 10000)
-            {
+
+            if (sal < 10000)
                 throw new InvalidOperationException("Invalid Salary");
-            }
-            _salary = amnt;
-       }
+
+            _name = name;
+            _salary = sal;
+            Console.WriteLine(456);
+           }
+    
+       
+      
         public float IncreaseSalary(float amount)
         {
             if (amount <= 0)
@@ -61,11 +61,12 @@
         }
 
           public void DisplayDetails()
-        {
+          {
             Console.WriteLine($"Employee ID : {_id} ");
             Console.WriteLine($"Employee name is: {_name}");
             Console.WriteLine($"Employee salary is: {_salary}" );
-        }
+          }
+
     }
 }
            

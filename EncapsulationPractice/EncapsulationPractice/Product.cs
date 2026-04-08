@@ -1,7 +1,7 @@
 ﻿namespace Encapsultion
 {
     public class Product
-        {
+    {
             
             private string _name;
             private float _price;
@@ -10,28 +10,24 @@
             public string Name => _name;
             public float Price => _price;
             public float Discount => _discount;
+
             public Product(string name, float price )
             {
                
-
                 if (string.IsNullOrWhiteSpace(name))
                 {
                     throw new ArgumentNullException("Invalid Name");
                 }
                 _name = name;
-             
-                SetPrice(price);
-            }
 
-            private void SetPrice(float amnt)
-            {
-                if (amnt <= 0)
+                if (price <= 0)
                 {
                     throw new InvalidOperationException("Invalid Price");
                 }
-                _price = amnt;
+                _price = price;
             }
-            
+
+          
             public void SetDiscount(float amnt)
             {
                 if(amnt < 0 || amnt > 50)
@@ -54,8 +50,8 @@
                 Console.WriteLine($"Product name is: {_name}");
                 Console.WriteLine($"Product price is: {_price}");
             }
-        }
     }
+}
 
 
 
