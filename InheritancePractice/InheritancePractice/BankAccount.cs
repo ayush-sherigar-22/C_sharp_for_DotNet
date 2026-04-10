@@ -6,7 +6,7 @@
 
         public BankAccount()
         {
-            
+            Console.WriteLine("this is parent");
         }
        
 
