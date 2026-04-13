@@ -23,6 +23,52 @@
 
        
     }
+
+    public class FestiveDiscount : Discount
+    {
+        public FestiveDiscount(double price) : base(price) { }
+
+
+        public override double ApplyDiscount(double price)
+        {
+            if (price > 1000)
+            {
+                return (price -= (price * 0.2));
+            }
+            else { return (price); }
+
+
+        }
+
+    }
+    public class MembershipDiscount : Discount
+    {
+        public MembershipDiscount(double price) : base(price) { }
+
+
+        public override double ApplyDiscount(double price)
+        {
+            if (price > 2000)
+            {
+                return (price -= 500);
+            }
+            else { return price; }
+        }
+
+    }
+
+    public class NoDiscount : Discount
+    {
+        public NoDiscount(double price) : base(price) { }
+
+
+        public override double ApplyDiscount(double price)
+        {
+            return price;
+        }
+
+    }
+
 }
 
 
