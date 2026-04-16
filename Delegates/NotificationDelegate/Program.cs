@@ -4,7 +4,7 @@ namespace Delegates
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main(string[] args) 
         {
 
           Notification notify = SMS;
